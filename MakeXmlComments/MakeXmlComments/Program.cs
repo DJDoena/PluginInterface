@@ -8,55 +8,50 @@ namespace MakeXmlComments
     {
         public static void Main(String[] args)
         {
-            StringBuilder outFile;
-            String fileName;
-
             if ((args == null) || (args.Length == 0))
             {
                 Console.WriteLine("Invalid argument. Please specify path to PluginInterface.cs");
+
                 return;
             }
-            fileName = args[0];
+
+            String fileName = args[0];
+
             if (File.Exists(args[0]) == false)
             {
                 Console.WriteLine("Invalid argument. PluginInterface.cs not found.");
+
                 return;
             }
-            outFile = new StringBuilder();
+
+            StringBuilder outFile = new StringBuilder();
+
             using (StreamReader sr = new StreamReader(fileName))
             {
                 while (sr.EndOfStream == false)
                 {
-                    String inFile;
-                    String[] split;
+                    String inFile = sr.ReadLine();
 
-                    inFile = sr.ReadLine();
-                    split = inFile.Split(';');
+                    String[] split = inFile.Split(';');
+
                     if (split.Length > 1)
                     {
-                        String comment;
+                        String comment = split[1];
 
-                        comment = split[1];
                         if (comment.Contains("//"))
                         {
-                            Int32 countBlanks;
-                            String blanks;
-                            String code;
-
                             comment = comment.Trim().Replace("//", String.Empty).Trim();
-                            code = split[0];
-                            countBlanks = code.Length - code.TrimStart().Length;
-                            blanks = String.Empty;
-                            for (Int32 i = 0; i < countBlanks; i++)
-                            {
-                                blanks += " ";
-                            }
-                            outFile.Append(blanks);
+
+                            String code = split[0];
+
+                            String indentation = code.Substring(0, code.Length - code.TrimStart().Length);
+
+                            outFile.Append(indentation);
                             outFile.AppendLine("///<summary>");
-                            outFile.Append(blanks);
+                            outFile.Append(indentation);
                             outFile.Append("/// ");
                             outFile.AppendLine(comment);
-                            outFile.Append(blanks);
+                            outFile.Append(indentation);
                             outFile.AppendLine("///</summary>");
                             outFile.Append(code);
                             outFile.AppendLine(";");
@@ -64,16 +59,19 @@ namespace MakeXmlComments
                         else
                         {
                             outFile.AppendLine(inFile);
+
                             continue;
                         }
                     }
                     else
                     {
                         outFile.AppendLine(inFile);
+
                         continue;
                     }
                 }
             }
+
             using (StreamWriter sw = new StreamWriter(fileName))
             {
                 sw.Write(outFile.ToString());
