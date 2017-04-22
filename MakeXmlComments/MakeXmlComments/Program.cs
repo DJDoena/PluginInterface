@@ -17,17 +17,25 @@ namespace MakeXmlComments
 
             String fileName = args[0];
 
-            if (File.Exists(args[0]) == false)
+            if (File.Exists(fileName) == false)
             {
                 Console.WriteLine("Invalid argument. PluginInterface.cs not found.");
 
                 return;
             }
 
+            ProcessFile(fileName);
+        }
+
+        private static void ProcessFile(String fileName)
+        {
             StringBuilder outFile = new StringBuilder();
 
+            Encoding encoding;
             using (StreamReader sr = new StreamReader(fileName))
             {
+                encoding = sr.CurrentEncoding;
+
                 while (sr.EndOfStream == false)
                 {
                     String inFile = sr.ReadLine();
@@ -40,42 +48,39 @@ namespace MakeXmlComments
 
                         if (comment.Contains("//"))
                         {
-                            comment = comment.Trim().Replace("//", String.Empty).Trim();
-
-                            String code = split[0];
-
-                            String indentation = code.Substring(0, code.Length - code.TrimStart().Length);
-
-                            outFile.Append(indentation);
-                            outFile.AppendLine("///<summary>");
-                            outFile.Append(indentation);
-                            outFile.Append("/// ");
-                            outFile.AppendLine(comment);
-                            outFile.Append(indentation);
-                            outFile.AppendLine("///</summary>");
-                            outFile.Append(code);
-                            outFile.AppendLine(";");
-                        }
-                        else
-                        {
-                            outFile.AppendLine(inFile);
+                            RewriteLine(outFile, split[0], comment);
 
                             continue;
                         }
                     }
-                    else
-                    {
-                        outFile.AppendLine(inFile);
 
-                        continue;
-                    }
+                    outFile.AppendLine(inFile);
                 }
             }
 
-            using (StreamWriter sw = new StreamWriter(fileName))
+            using (StreamWriter sw = new StreamWriter(fileName, false, encoding))
             {
                 sw.Write(outFile.ToString());
             }
+        }
+
+        private static void RewriteLine(StringBuilder outFile
+            , String code
+            , String comment)
+        {
+            comment = comment.Trim().Replace("//", String.Empty).Trim();
+
+            String indentation = code.Substring(0, code.Length - code.TrimStart().Length);
+
+            outFile.Append(indentation);
+            outFile.AppendLine("///<summary>");
+            outFile.Append(indentation);
+            outFile.Append("/// ");
+            outFile.AppendLine(comment);
+            outFile.Append(indentation);
+            outFile.AppendLine("///</summary>");
+            outFile.Append(code);
+            outFile.AppendLine(";");
         }
     }
 }
