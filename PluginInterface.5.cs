@@ -589,6 +589,7 @@ namespace Invelos.DVDProfilerPlugin
 		public const int CURRENCY_TWD = 26;
 		public const int CURRENCY_THB = 27;
 		public const int CURRENCY_TRL = 28;
+		public const int CURRENCY_MYR = 29;
 		///<summary>
 		/// Stored internally as Satoshi (.00000001 XBT)
 		///</summary>
