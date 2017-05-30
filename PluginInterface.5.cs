@@ -359,6 +359,10 @@ namespace Invelos.DVDProfilerPlugin
 		public const int DP_COLOR_BLACKANDWHITE = 16;
 		public const int DP_COLOR_COLORIZED     = 32;
 		public const int DP_COLOR_MIXED         = 64;
+
+        // As are these
+        public const int DR_HDR10       = 1;
+        public const int DR_DolbyVision = 2;
 		
 		public const int FEATURE_SceneAccess     = 0;
 		public const int FEATURE_Commentary      = 1;
@@ -821,7 +825,7 @@ namespace Invelos.DVDProfilerPlugin
 		}
 	}
 
-	[Guid("0A4F32DC-D6AF-4D79-AE47-06D9FA0A0492"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+    [Guid("F41E0189-0483-4C05-AD30-B318E8518539"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 	public interface IDVDInfo
 	{
 		// Internal use
@@ -874,6 +878,10 @@ namespace Invelos.DVDProfilerPlugin
 		// These use the bitwise values from above
 		int GetColorType();
 		void SetColorType(int Value);
+
+        // As do these
+        int GetDRType();
+        void SetDRTYpe(int Value);
 
 		string GetOverview();
 		void SetOverview(string Value);
