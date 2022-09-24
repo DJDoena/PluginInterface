@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>DoenaSoft.DVDProfiler.Interface</id>
+    <version>2.0.0</version>
+    <title>DoenaSoft.DVDProfiler.Interface</title>
+    <authors>DJ Doena</authors>
+    <icon>images\djdsoft.png</icon>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/DJDoena/PluginInterface</projectUrl>
+    <description>Invelos interface for DVD Profiler COM plugins</description>
+    <copyright>Invelos 2007 - 2022</copyright>
+    <tags>dvd-profiler, dvdprofiler, invelos</tags>
+  </metadata>
+  <files>
+    <file src="bin\x86\Release\DoenaSoft.DVDProfiler.Interface.dll" target="build\x86\DoenaSoft.DVDProfiler.Interface.dll" />
+
+    <file src="djdsoft.png" target="images\" />
+</files>
+</package>
