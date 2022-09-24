@@ -74,25 +74,14 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PluginInterface.2.cs" />
+    <None Include="PluginInterface.2.cs" />
     <None Include="DVDProfiler.Interface.nuspec" />
-    <None Include="PluginInterface.3.cs" />
+    <Compile Include="PluginInterface.3.cs" />
     <None Include="PluginInterface.4.cs" />
     <None Include="PluginInterface.5.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DVDProfiler.Interface.snk" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="DoenaSoft.DVDProfilerXML">
-      <Version>4.1.2</Version>
-    </PackageReference>
-    <PackageReference Include="DoenaSoft.EnhancedPurchaseInfo.Interface">
-      <Version>1.1.2</Version>
-    </PackageReference>
-    <PackageReference Include="DoenaSoft.EnhancedTitles.Interface">
-      <Version>1.1.1</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="djdsoft.png" />
