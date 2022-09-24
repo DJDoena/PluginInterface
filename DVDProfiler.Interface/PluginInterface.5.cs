@@ -3,18 +3,18 @@ using System.Runtime.InteropServices;
 
 namespace Invelos.DVDProfilerPlugin
 {
-	class PluginConstants
+	public static class PluginConstants
 	{
 		public const int API_VERSION = 5;
 
-		public const int FORMID_Main        = 0;
-		public const int FORMID_AddDVDs     = 1;
-		public const int FORMID_Reports     = 2;
-		public const int FORMID_Welcome     = 3;
-		public const int FORMID_Options     = 4;
+		public const int FORMID_Main = 0;
+		public const int FORMID_AddDVDs = 1;
+		public const int FORMID_Reports = 2;
+		public const int FORMID_Welcome = 3;
+		public const int FORMID_Options = 4;
 		public const int FORMID_EditProfile = 5;
 		public const int FORMID_Personalize = 6;
-		public const int FORMID_LoadLayout  = 7;
+		public const int FORMID_LoadLayout = 7;
 
 		// Menu IDs
 		public const int MENUID_Form = 0;
@@ -29,7 +29,7 @@ namespace Invelos.DVDProfilerPlugin
 		public const int ACTIONID_AddDVDs_GetPendingList = 0;
 
 		// Standard Action result error codes
-		public const int ACTIONResult_Unknown       = -1;
+		public const int ACTIONResult_Unknown = -1;
 		public const int ACTIONResult_FormNotLoaded = -2;
 
 		// Event IDs
@@ -37,212 +37,212 @@ namespace Invelos.DVDProfilerPlugin
 		///<summary>
 		/// EventData is error description
 		///</summary>
-		public const int EVENTID_Exception              = 0;
+		public const int EVENTID_Exception = 0;
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_PluginUnloading        = 1;
+		public const int EVENTID_PluginUnloading = 1;
 		// Custom Plugin Events
 		///<summary>
 		/// EventData is Custom Event ID
 		///</summary>
-		public const int EVENTID_CustomMenuClick        = 100;
+		public const int EVENTID_CustomMenuClick = 100;
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_CustomPluginOptions    = 101;
+		public const int EVENTID_CustomPluginOptions = 101;
 		// Program Events
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_ProgramLoaded          = 200;
+		public const int EVENTID_ProgramLoaded = 200;
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_ProgramMinimized       = 201;
+		public const int EVENTID_ProgramMinimized = 201;
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_ProgramRestored        = 202;
+		public const int EVENTID_ProgramRestored = 202;
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_ProgramGotFocus        = 203;
+		public const int EVENTID_ProgramGotFocus = 203;
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_ProgramLostFocus       = 204;
+		public const int EVENTID_ProgramLostFocus = 204;
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_ProgramLayoutSaving    = 205;
+		public const int EVENTID_ProgramLayoutSaving = 205;
 		///<summary>
 		/// EventData is Layout file name
 		///</summary>
-		public const int EVENTID_ProgramLayoutLoaded    = 206;
+		public const int EVENTID_ProgramLayoutLoaded = 206;
 		// Form Events
 		///<summary>
 		/// EventData is Form ID
 		///</summary>
-		public const int EVENTID_FormCreated            = 300;
+		public const int EVENTID_FormCreated = 300;
 		///<summary>
 		/// EventData is Form ID
 		///</summary>
-		public const int EVENTID_FormDestroyed          = 301;
+		public const int EVENTID_FormDestroyed = 301;
 		///<summary>
 		/// EventData is Host window's WindowHandle
 		///</summary>
-		public const int EVENTID_HostWindowClosed       = 302;
+		public const int EVENTID_HostWindowClosed = 302;
 		// Profile Events
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDSelected            = 400;
+		public const int EVENTID_DVDSelected = 400;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDEditStart           = 401;
+		public const int EVENTID_DVDEditStart = 401;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDEditSave            = 402;
+		public const int EVENTID_DVDEditSave = 402;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDEditSaveNoChanges   = 428;
+		public const int EVENTID_DVDEditSaveNoChanges = 428;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDEditCancel          = 403;
+		public const int EVENTID_DVDEditCancel = 403;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToOwned        = 404;
+		public const int EVENTID_DVDMovedToOwned = 404;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToOrdered      = 405;
+		public const int EVENTID_DVDMovedToOrdered = 405;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToWishList     = 406;
+		public const int EVENTID_DVDMovedToWishList = 406;
 		///<summary>
 		/// EventData is image file name
 		///</summary>
-		public const int EVENTID_DVDImagesChanged       = 407;
+		public const int EVENTID_DVDImagesChanged = 407;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDWatched             = 408;
+		public const int EVENTID_DVDWatched = 408;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDLoaned              = 409;
+		public const int EVENTID_DVDLoaned = 409;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDDueDateChanged      = 410;
+		public const int EVENTID_DVDDueDateChanged = 410;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDReturned            = 411;
+		public const int EVENTID_DVDReturned = 411;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDHistoryEdited       = 412;
+		public const int EVENTID_DVDHistoryEdited = 412;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDTagsChanged         = 413;
+		public const int EVENTID_DVDTagsChanged = 413;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDAdded               = 414;
+		public const int EVENTID_DVDAdded = 414;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDRemoved             = 415;
+		public const int EVENTID_DVDRemoved = 415;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDRefreshed           = 416;
+		public const int EVENTID_DVDRefreshed = 416;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDImagesRefreshed     = 417;
+		public const int EVENTID_DVDImagesRefreshed = 417;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom0      = 418;
+		public const int EVENTID_DVDMovedToCustom0 = 418;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom1      = 419;
+		public const int EVENTID_DVDMovedToCustom1 = 419;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom2      = 420;
+		public const int EVENTID_DVDMovedToCustom2 = 420;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom3      = 421;
+		public const int EVENTID_DVDMovedToCustom3 = 421;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom4      = 422;
+		public const int EVENTID_DVDMovedToCustom4 = 422;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom5      = 423;
+		public const int EVENTID_DVDMovedToCustom5 = 423;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom6      = 424;
+		public const int EVENTID_DVDMovedToCustom6 = 424;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom7      = 425;
+		public const int EVENTID_DVDMovedToCustom7 = 425;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom8      = 426;
+		public const int EVENTID_DVDMovedToCustom8 = 426;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDMovedToCustom9      = 427;
+		public const int EVENTID_DVDMovedToCustom9 = 427;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDPersonalized        = 429;
+		public const int EVENTID_DVDPersonalized = 429;
 		///<summary>
 		/// EventData is CastIndex
 		///</summary>
-		public const int EVENTID_DVDCastEntrySelected   = 430;
+		public const int EVENTID_DVDCastEntrySelected = 430;
 		///<summary>
 		/// EventData is CrewIndex
 		///</summary>
-		public const int EVENTID_DVDCrewEntrySelected   = 431;
+		public const int EVENTID_DVDCrewEntrySelected = 431;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDReviewed            = 432;
-        ///<summary>
-        /// EventData is Profile ID
-        ///</summary>
-        public const int EVENTID_DVDPersonalizeShown    = 433;
-        ///<summary>
-        /// EventData is Profile ID
-        ///</summary>
-        public const int EVENTID_DVDPersonalizedAddition = 434;
-        // Flag Events
+		public const int EVENTID_DVDReviewed = 432;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDFlagged             = 500;
+		public const int EVENTID_DVDPersonalizeShown = 433;
 		///<summary>
 		/// EventData is Profile ID
 		///</summary>
-		public const int EVENTID_DVDUnflagged           = 501;
+		public const int EVENTID_DVDPersonalizedAddition = 434;
+		// Flag Events
+		///<summary>
+		/// EventData is Profile ID
+		///</summary>
+		public const int EVENTID_DVDFlagged = 500;
+		///<summary>
+		/// EventData is Profile ID
+		///</summary>
+		public const int EVENTID_DVDUnflagged = 501;
 		///<summary>
 		/// EventData is null
 		///</summary>
@@ -250,319 +250,319 @@ namespace Invelos.DVDProfilerPlugin
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_BulkFlagOperationEnd   = 503;
+		public const int EVENTID_BulkFlagOperationEnd = 503;
 		// Collection Display Events
 		///<summary>
 		/// EventData is Sort Order Type
 		///</summary>
-		public const int EVENTID_SortOrderChanged       = 600;
+		public const int EVENTID_SortOrderChanged = 600;
 		///<summary>
 		/// EventData is null
 		///</summary>
-		public const int EVENTID_CollectionListChanged  = 601;
+		public const int EVENTID_CollectionListChanged = 601;
 		// Interface Events
 		///<summary>
 		/// EventData is name of theme
 		///</summary>
-		public const int EVENTID_ThemeChanged           = 700;
+		public const int EVENTID_ThemeChanged = 700;
 		// Collection Events
 		///<summary>
 		/// EventData is file path and name
 		///</summary>
-		public const int EVENTID_BackupStarting         = 800;
+		public const int EVENTID_BackupStarting = 800;
 		///<summary>
 		/// EventData is file path and name
 		///</summary>
-		public const int EVENTID_BackupFinished         = 801;
+		public const int EVENTID_BackupFinished = 801;
 		///<summary>
 		/// EventData is file path and name
 		///</summary>
-		public const int EVENTID_BackupCancelled        = 802;
+		public const int EVENTID_BackupCancelled = 802;
 		///<summary>
 		/// EventData is file path and name
 		///</summary>
-		public const int EVENTID_RestoreStarting        = 803;
+		public const int EVENTID_RestoreStarting = 803;
 		///<summary>
 		/// EventData is file path and name
 		///</summary>
-		public const int EVENTID_RestoreFinished        = 804;
+		public const int EVENTID_RestoreFinished = 804;
 		///<summary>
 		/// EventData is file path and name
 		///</summary>
-		public const int EVENTID_RestoreCancelled       = 805;
+		public const int EVENTID_RestoreCancelled = 805;
 		///<summary>
 		/// EventData is path
 		///</summary>
-		public const int EVENTID_DatabaseOpened         = 806;
+		public const int EVENTID_DatabaseOpened = 806;
 		///<summary>
 		/// EventData is path
 		///</summary>
-		public const int EVENTID_DatabaseClosed	        = 807;
-		
-		// Field-specific IDs
-		public const int GENRE_None             = 0;
-		public const int GENRE_Accessories      = 1;
-		public const int GENRE_Action           = 2;
-		public const int GENRE_Adult            = 3;
-		public const int GENRE_Animation        = 4;
-		public const int GENRE_Classic          = 5;
-		public const int GENRE_Comedy           = 6;
-		public const int GENRE_Drama            = 7;
-		public const int GENRE_Family           = 8;
-		public const int GENRE_Horror           = 10;
-		public const int GENRE_Music            = 11;
-		public const int GENRE_ScienceFiction   = 12;
-		public const int GENRE_SpecialInterest  = 13;
-		public const int GENRE_SuspenseThriller = 14;
-		public const int GENRE_Western          = 15;
-		public const int GENRE_Adventure        = 16;
-		public const int GENRE_Romance          = 17;
-		public const int GENRE_Fantasy          = 18;
-		public const int GENRE_Anime            = 19;
-		public const int GENRE_Documentary      = 20;
-		public const int GENRE_Musical          = 21;
-		public const int GENRE_Television       = 22;
-		public const int GENRE_Sports           = 23;
-		public const int GENRE_War              = 24;
-		public const int GENRE_MartialArts      = 25;
-		public const int GENRE_Crime            = 26;
-		public const int GENRE_Disaster         = 27;
-		public const int GENRE_FilmNoir         = 28;
-		public const int GENRE_Childrens        = 29;
+		public const int EVENTID_DatabaseClosed = 807;
 
-		public const int CASETYPE_None      = 0;
-		public const int CASETYPE_KeepCase  = 1;
-		public const int CASETYPE_Snapper   = 2;
-		public const int CASETYPE_Jewel     = 3;
+		// Field-specific IDs
+		public const int GENRE_None = 0;
+		public const int GENRE_Accessories = 1;
+		public const int GENRE_Action = 2;
+		public const int GENRE_Adult = 3;
+		public const int GENRE_Animation = 4;
+		public const int GENRE_Classic = 5;
+		public const int GENRE_Comedy = 6;
+		public const int GENRE_Drama = 7;
+		public const int GENRE_Family = 8;
+		public const int GENRE_Horror = 10;
+		public const int GENRE_Music = 11;
+		public const int GENRE_ScienceFiction = 12;
+		public const int GENRE_SpecialInterest = 13;
+		public const int GENRE_SuspenseThriller = 14;
+		public const int GENRE_Western = 15;
+		public const int GENRE_Adventure = 16;
+		public const int GENRE_Romance = 17;
+		public const int GENRE_Fantasy = 18;
+		public const int GENRE_Anime = 19;
+		public const int GENRE_Documentary = 20;
+		public const int GENRE_Musical = 21;
+		public const int GENRE_Television = 22;
+		public const int GENRE_Sports = 23;
+		public const int GENRE_War = 24;
+		public const int GENRE_MartialArts = 25;
+		public const int GENRE_Crime = 26;
+		public const int GENRE_Disaster = 27;
+		public const int GENRE_FilmNoir = 28;
+		public const int GENRE_Childrens = 29;
+
+		public const int CASETYPE_None = 0;
+		public const int CASETYPE_KeepCase = 1;
+		public const int CASETYPE_Snapper = 2;
+		public const int CASETYPE_Jewel = 3;
 		public const int CASETYPE_Clamshell = 4;
-		public const int CASETYPE_Drawer    = 5;
-		public const int CASETYPE_Digipak   = 6;
-		public const int CASETYPE_Custom    = 7;
+		public const int CASETYPE_Drawer = 5;
+		public const int CASETYPE_Digipak = 6;
+		public const int CASETYPE_Custom = 7;
 		///<summary>
 		/// Slip Case
 		///</summary>
-		public const int CASETYPE_BoxSet    = 8;
-		public const int CASETYPE_Envelope  = 9;
+		public const int CASETYPE_BoxSet = 8;
+		public const int CASETYPE_Envelope = 9;
 		public const int CASETYPE_SteelBook = 10;
-		public const int CASETYPE_Elite     = 11;
-		public const int CASETYPE_THINpak   = 12;
+		public const int CASETYPE_Elite = 11;
+		public const int CASETYPE_THINpak = 12;
 		public const int CASETYPE_HDKeepCase = 13;
-		public const int CASETYPE_Digibook  = 14;
-		public const int CASETYPE_Box       = 15;
-		public const int CASETYPE_Handle    = 16;
+		public const int CASETYPE_Digibook = 14;
+		public const int CASETYPE_Box = 15;
+		public const int CASETYPE_Handle = 16;
 
-		public const int VIDSTD_NTSC        = 0;
-		public const int VIDSTD_PAL         = 1;
+		public const int VIDSTD_NTSC = 0;
+		public const int VIDSTD_PAL = 1;
 
 		// These are bitwise values
-		public const int DP_COLOR_COLOR         = 8;
+		public const int DP_COLOR_COLOR = 8;
 		public const int DP_COLOR_BLACKANDWHITE = 16;
-		public const int DP_COLOR_COLORIZED     = 32;
-		public const int DP_COLOR_MIXED         = 64;
+		public const int DP_COLOR_COLORIZED = 32;
+		public const int DP_COLOR_MIXED = 64;
 
-        // As are these
-        public const int DR_HDR10       = 1;
-        public const int DR_DolbyVision = 2;
-		
-		public const int FEATURE_SceneAccess     = 0;
-		public const int FEATURE_Commentary      = 1;
-		public const int FEATURE_Trailer         = 2;
-		public const int FEATURE_Gallery         = 3;
-		public const int FEATURE_DeletedScenes   = 4;
-		public const int FEATURE_Documentary     = 5;
+		// As are these
+		public const int DR_HDR10 = 1;
+		public const int DR_DolbyVision = 2;
+
+		public const int FEATURE_SceneAccess = 0;
+		public const int FEATURE_Commentary = 1;
+		public const int FEATURE_Trailer = 2;
+		public const int FEATURE_Gallery = 3;
+		public const int FEATURE_DeletedScenes = 4;
+		public const int FEATURE_Documentary = 5;
 		public const int FEATURE_ProductionNotes = 6;
 		public const int FEATURE_InteractiveGame = 7;
-		public const int FEATURE_DVDROMContent   = 8;
-		public const int FEATURE_MultiAngle      = 9;
-		public const int FEATURE_MusicVideos     = 10;
+		public const int FEATURE_DVDROMContent = 8;
+		public const int FEATURE_MultiAngle = 9;
+		public const int FEATURE_MusicVideos = 10;
 		public const int FEATURE_ClosedCaptioned = 11;
-		public const int FEATURE_THX             = 12;
-		public const int FEATURE_Interviews      = 13;
+		public const int FEATURE_THX = 12;
+		public const int FEATURE_Interviews = 13;
 		public const int FEATURE_StoryboardComps = 14;
-		public const int FEATURE_Bloopers        = 15;
-		public const int FEATURE_PIP             = 16;
-		public const int FEATURE_BDLive          = 17;
-		public const int FEATURE_BonusTrailers   = 18;
-		public const int FEATURE_DigitalCopy     = 19;
-		public const int FEATURE_DBOX            = 20;
-		public const int FEATURE_CineChat        = 21;
-		public const int FEATURE_PlayAll         = 22;
-		public const int FEATURE_MovieIQ         = 23;
+		public const int FEATURE_Bloopers = 15;
+		public const int FEATURE_PIP = 16;
+		public const int FEATURE_BDLive = 17;
+		public const int FEATURE_BonusTrailers = 18;
+		public const int FEATURE_DigitalCopy = 19;
+		public const int FEATURE_DBOX = 20;
+		public const int FEATURE_CineChat = 21;
+		public const int FEATURE_PlayAll = 22;
+		public const int FEATURE_MovieIQ = 23;
 
-		public const int LOCK_Entire          = 0;
-		public const int LOCK_Scans           = 1;
-		public const int LOCK_Title           = 2;
-		public const int LOCK_Overview        = 3;
-		public const int LOCK_Regions         = 4;
-		public const int LOCK_Genres          = 5;
-		public const int LOCK_PurchasePrice   = 6;
-		public const int LOCK_Studios         = 7;
+		public const int LOCK_Entire = 0;
+		public const int LOCK_Scans = 1;
+		public const int LOCK_Title = 2;
+		public const int LOCK_Overview = 3;
+		public const int LOCK_Regions = 4;
+		public const int LOCK_Genres = 5;
+		public const int LOCK_PurchasePrice = 6;
+		public const int LOCK_Studios = 7;
 		public const int LOCK_DiscInformation = 8;
-		public const int LOCK_Cast            = 9;
-		public const int LOCK_Crew            = 10;
-		public const int LOCK_Features        = 11;
-		public const int LOCK_AudioTracks     = 12;
-		public const int LOCK_Subtitles       = 13;
-		public const int LOCK_EasterEggs      = 14;
-		public const int LOCK_RunningTime     = 15;
-		public const int LOCK_ReleaseDate     = 16;
-		public const int LOCK_ProductionYear  = 17;
-		public const int LOCK_CaseType        = 18;
-		public const int LOCK_VideoFormats    = 19;
-		public const int LOCK_BoxSetContents  = 20;
-		public const int LOCK_Rating          = 21;
-		public const int LOCK_MediaTypes      = 22;
+		public const int LOCK_Cast = 9;
+		public const int LOCK_Crew = 10;
+		public const int LOCK_Features = 11;
+		public const int LOCK_AudioTracks = 12;
+		public const int LOCK_Subtitles = 13;
+		public const int LOCK_EasterEggs = 14;
+		public const int LOCK_RunningTime = 15;
+		public const int LOCK_ReleaseDate = 16;
+		public const int LOCK_ProductionYear = 17;
+		public const int LOCK_CaseType = 18;
+		public const int LOCK_VideoFormats = 19;
+		public const int LOCK_BoxSetContents = 20;
+		public const int LOCK_Rating = 21;
+		public const int LOCK_MediaTypes = 22;
 
-		public const int COLLTYPE_Owned    = 1;
-		public const int COLLTYPE_Ordered  = 2;
+		public const int COLLTYPE_Owned = 1;
+		public const int COLLTYPE_Ordered = 2;
 		public const int COLLTYPE_WishList = 3;
-		public const int COLLTYPE_Custom0  = 4;
-		public const int COLLTYPE_Custom1  = 5;
-		public const int COLLTYPE_Custom2  = 6;
-		public const int COLLTYPE_Custom3  = 7;
-		public const int COLLTYPE_Custom4  = 8;
-		public const int COLLTYPE_Custom5  = 9;
-		public const int COLLTYPE_Custom6  = 10;
-		public const int COLLTYPE_Custom7  = 11;
-		public const int COLLTYPE_Custom8  = 12;
-		public const int COLLTYPE_Custom9  = 13;
+		public const int COLLTYPE_Custom0 = 4;
+		public const int COLLTYPE_Custom1 = 5;
+		public const int COLLTYPE_Custom2 = 6;
+		public const int COLLTYPE_Custom3 = 7;
+		public const int COLLTYPE_Custom4 = 8;
+		public const int COLLTYPE_Custom5 = 9;
+		public const int COLLTYPE_Custom6 = 10;
+		public const int COLLTYPE_Custom7 = 11;
+		public const int COLLTYPE_Custom8 = 12;
+		public const int COLLTYPE_Custom9 = 13;
 
-		public const int REVIEWPART_Film   = 0;
-		public const int REVIEWPART_Video  = 1;
-		public const int REVIEWPART_Audio  = 2;
+		public const int REVIEWPART_Film = 0;
+		public const int REVIEWPART_Video = 1;
+		public const int REVIEWPART_Audio = 2;
 		public const int REVIEWPART_Extras = 3;
 
-		public const int SUBTITLE_Afrikaans  = 0;
-		public const int SUBTITLE_Arabic     = 1;
-		public const int SUBTITLE_Bahasa     = 38;
-		public const int SUBTITLE_Bambara    = 39;
-		public const int SUBTITLE_Basque     = 40;
-		public const int SUBTITLE_Bulgarian  = 2;
+		public const int SUBTITLE_Afrikaans = 0;
+		public const int SUBTITLE_Arabic = 1;
+		public const int SUBTITLE_Bahasa = 38;
+		public const int SUBTITLE_Bambara = 39;
+		public const int SUBTITLE_Basque = 40;
+		public const int SUBTITLE_Bulgarian = 2;
 		public const int SUBTITLE_Catalonian = 41;
-		public const int SUBTITLE_Chinese    = 3;
-		public const int SUBTITLE_Croatian   = 4;
-		public const int SUBTITLE_Czech      = 5;
-		public const int SUBTITLE_Danish     = 6;
-		public const int SUBTITLE_Dutch      = 7;
-		public const int SUBTITLE_English    = 8;
-		public const int SUBTITLE_Estonian   = 42;
-		public const int SUBTITLE_Farsi      = 9;
-		public const int SUBTITLE_Finnish    = 10;
-		public const int SUBTITLE_Flemish    = 43;
-		public const int SUBTITLE_French     = 11;
-		public const int SUBTITLE_Galician   = 44;
-		public const int SUBTITLE_Georgian   = 45;
-		public const int SUBTITLE_German     = 12;
-		public const int SUBTITLE_Greek      = 13;
-		public const int SUBTITLE_Hebrew     = 14;
-		public const int SUBTITLE_Hindi      = 15;
-		public const int SUBTITLE_Hungarian  = 16;
-		public const int SUBTITLE_Icelandic  = 17;
-		public const int SUBTITLE_Italian    = 18;
-		public const int SUBTITLE_Japanese   = 19;
-		public const int SUBTITLE_Korean     = 20;
-		public const int SUBTITLE_Latvian    = 46;
+		public const int SUBTITLE_Chinese = 3;
+		public const int SUBTITLE_Croatian = 4;
+		public const int SUBTITLE_Czech = 5;
+		public const int SUBTITLE_Danish = 6;
+		public const int SUBTITLE_Dutch = 7;
+		public const int SUBTITLE_English = 8;
+		public const int SUBTITLE_Estonian = 42;
+		public const int SUBTITLE_Farsi = 9;
+		public const int SUBTITLE_Finnish = 10;
+		public const int SUBTITLE_Flemish = 43;
+		public const int SUBTITLE_French = 11;
+		public const int SUBTITLE_Galician = 44;
+		public const int SUBTITLE_Georgian = 45;
+		public const int SUBTITLE_German = 12;
+		public const int SUBTITLE_Greek = 13;
+		public const int SUBTITLE_Hebrew = 14;
+		public const int SUBTITLE_Hindi = 15;
+		public const int SUBTITLE_Hungarian = 16;
+		public const int SUBTITLE_Icelandic = 17;
+		public const int SUBTITLE_Italian = 18;
+		public const int SUBTITLE_Japanese = 19;
+		public const int SUBTITLE_Korean = 20;
+		public const int SUBTITLE_Latvian = 46;
 		public const int SUBTITLE_Lithuanian = 47;
-		public const int SUBTITLE_Mongolian  = 48;
-		public const int SUBTITLE_Norwegian  = 21;
-		public const int SUBTITLE_Pashtu     = 49;
-		public const int SUBTITLE_Polish     = 22;
+		public const int SUBTITLE_Mongolian = 48;
+		public const int SUBTITLE_Norwegian = 21;
+		public const int SUBTITLE_Pashtu = 49;
+		public const int SUBTITLE_Polish = 22;
 		public const int SUBTITLE_Portuguese = 23;
-		public const int SUBTITLE_Romanian   = 24;
-		public const int SUBTITLE_Rumantsch  = 50;
-		public const int SUBTITLE_Russian    = 25;
-		public const int SUBTITLE_Serbian    = 51;
-		public const int SUBTITLE_Spanish    = 26;
-		public const int SUBTITLE_Slovakian  = 27;
-		public const int SUBTITLE_Slovenian  = 28;
-		public const int SUBTITLE_Swedish    = 29;
-		public const int SUBTITLE_SwissGerman= 52;
-		public const int SUBTITLE_Tagalog    = 30;
-		public const int SUBTITLE_Thai       = 31;
-		public const int SUBTITLE_Tibetan    = 54;
-		public const int SUBTITLE_Turkish    = 32;
-		public const int SUBTITLE_Valencian  = 53;
+		public const int SUBTITLE_Romanian = 24;
+		public const int SUBTITLE_Rumantsch = 50;
+		public const int SUBTITLE_Russian = 25;
+		public const int SUBTITLE_Serbian = 51;
+		public const int SUBTITLE_Spanish = 26;
+		public const int SUBTITLE_Slovakian = 27;
+		public const int SUBTITLE_Slovenian = 28;
+		public const int SUBTITLE_Swedish = 29;
+		public const int SUBTITLE_SwissGerman = 52;
+		public const int SUBTITLE_Tagalog = 30;
+		public const int SUBTITLE_Thai = 31;
+		public const int SUBTITLE_Tibetan = 54;
+		public const int SUBTITLE_Turkish = 32;
+		public const int SUBTITLE_Valencian = 53;
 		public const int SUBTITLE_Vietnamese = 55;
-		public const int SUBTITLE_Xhosa      = 33;
-		public const int SUBTITLE_Zulu       = 34;
+		public const int SUBTITLE_Xhosa = 33;
+		public const int SUBTITLE_Zulu = 34;
 		public const int SUBTITLE_Commentary = 35;
-		public const int SUBTITLE_Trivia     = 36;
-		public const int SUBTITLE_Other      = 37;
-	
-		public const int AUDIOCONT_None       = 0;
-		public const int AUDIOCONT_Arabic     = 22;
-		public const int AUDIOCONT_Bulgarian  = 23;
-		public const int AUDIOCONT_Cantonese  = 18;
-		public const int AUDIOCONT_Czech      = 24;
-		public const int AUDIOCONT_Danish     = 15;
-		public const int AUDIOCONT_Dutch      = 12;
-		public const int AUDIOCONT_English    = 1;
-		public const int AUDIOCONT_Farsi      = 31;
-		public const int AUDIOCONT_Finnish    = 16;
-		public const int AUDIOCONT_French     = 2;
-		public const int AUDIOCONT_German     = 9;
-		public const int AUDIOCONT_Greek      = 25;
-		public const int AUDIOCONT_Hebrew     = 26;
-		public const int AUDIOCONT_Hindi      = 20;
-		public const int AUDIOCONT_Hungarian  = 27;
-		public const int AUDIOCONT_Icelandic  = 30;
-		public const int AUDIOCONT_Italian    = 10;
-		public const int AUDIOCONT_Japanese   = 4;
-		public const int AUDIOCONT_Korean     = 19;
-		public const int AUDIOCONT_Mandarin   = 5;
-		public const int AUDIOCONT_Norwegian  = 14;
-		public const int AUDIOCONT_Polish     = 21;
+		public const int SUBTITLE_Trivia = 36;
+		public const int SUBTITLE_Other = 37;
+
+		public const int AUDIOCONT_None = 0;
+		public const int AUDIOCONT_Arabic = 22;
+		public const int AUDIOCONT_Bulgarian = 23;
+		public const int AUDIOCONT_Cantonese = 18;
+		public const int AUDIOCONT_Czech = 24;
+		public const int AUDIOCONT_Danish = 15;
+		public const int AUDIOCONT_Dutch = 12;
+		public const int AUDIOCONT_English = 1;
+		public const int AUDIOCONT_Farsi = 31;
+		public const int AUDIOCONT_Finnish = 16;
+		public const int AUDIOCONT_French = 2;
+		public const int AUDIOCONT_German = 9;
+		public const int AUDIOCONT_Greek = 25;
+		public const int AUDIOCONT_Hebrew = 26;
+		public const int AUDIOCONT_Hindi = 20;
+		public const int AUDIOCONT_Hungarian = 27;
+		public const int AUDIOCONT_Icelandic = 30;
+		public const int AUDIOCONT_Italian = 10;
+		public const int AUDIOCONT_Japanese = 4;
+		public const int AUDIOCONT_Korean = 19;
+		public const int AUDIOCONT_Mandarin = 5;
+		public const int AUDIOCONT_Norwegian = 14;
+		public const int AUDIOCONT_Polish = 21;
 		public const int AUDIOCONT_Portuguese = 17;
-		public const int AUDIOCONT_Romanian   = 29;
-		public const int AUDIOCONT_Russian    = 11;
-		public const int AUDIOCONT_Spanish    = 3;
-		public const int AUDIOCONT_Swedish    = 13;
-		public const int AUDIOCONT_Tagalog    = 28;
-		public const int AUDIOCONT_Turkish    = 32;
+		public const int AUDIOCONT_Romanian = 29;
+		public const int AUDIOCONT_Russian = 11;
+		public const int AUDIOCONT_Spanish = 3;
+		public const int AUDIOCONT_Swedish = 13;
+		public const int AUDIOCONT_Tagalog = 28;
+		public const int AUDIOCONT_Turkish = 32;
 		public const int AUDIOCONT_Commentary = 6;
-		public const int AUDIOCONT_MusicOnly  = 7;
-		public const int AUDIOCONT_Other      = 8;
+		public const int AUDIOCONT_MusicOnly = 7;
+		public const int AUDIOCONT_Other = 8;
 
-		public const int AUDIOFORMAT_None             = 0;
-		public const int AUDIOFORMAT_DolbyDigital     = 3;
-		public const int AUDIOFORMAT_DTS              = 5;
-		public const int AUDIOFORMAT_DolbyDigitalEX   = 4;
-		public const int AUDIOFORMAT_DTSES            = 6;
+		public const int AUDIOFORMAT_None = 0;
+		public const int AUDIOFORMAT_DolbyDigital = 3;
+		public const int AUDIOFORMAT_DTS = 5;
+		public const int AUDIOFORMAT_DolbyDigitalEX = 4;
+		public const int AUDIOFORMAT_DTSES = 6;
 		public const int AUDIOFORMAT_DolbyDigitalPlus = 7;
-		public const int AUDIOFORMAT_DolbyTrueHD      = 8;
-        public const int AUDIOFORMAT_DolbyAtmos       = 11;
-		public const int AUDIOFORMAT_DTSHD_HR         = 9;
-		public const int AUDIOFORMAT_DTSHD_MA         = 10;
-        public const int AUDIOFORMAT_DTS_X            = 12;
-		public const int AUDIOFORMAT_PCM              = 1;
-		public const int AUDIOFORMAT_MP2              = 2;
-        public const int AUDIOFORMAT_Auro_3D          = 13;
+		public const int AUDIOFORMAT_DolbyTrueHD = 8;
+		public const int AUDIOFORMAT_DolbyAtmos = 11;
+		public const int AUDIOFORMAT_DTSHD_HR = 9;
+		public const int AUDIOFORMAT_DTSHD_MA = 10;
+		public const int AUDIOFORMAT_DTS_X = 12;
+		public const int AUDIOFORMAT_PCM = 1;
+		public const int AUDIOFORMAT_MP2 = 2;
+		public const int AUDIOFORMAT_Auro_3D = 13;
 
-		public const int AUDIOCHANNELS_None         = 0;
-		public const int AUDIOCHANNELS_Mono         = 1;
-		public const int AUDIOCHANNELS_2Channel     = 2;
-		public const int AUDIOCHANNELS_Surround     = 3;
-		public const int AUDIOCHANNELS_4_0          = 4;
-		public const int AUDIOCHANNELS_4_1          = 5;
-		public const int AUDIOCHANNELS_5_0          = 6;
-		public const int AUDIOCHANNELS_5_1          = 7;
+		public const int AUDIOCHANNELS_None = 0;
+		public const int AUDIOCHANNELS_Mono = 1;
+		public const int AUDIOCHANNELS_2Channel = 2;
+		public const int AUDIOCHANNELS_Surround = 3;
+		public const int AUDIOCHANNELS_4_0 = 4;
+		public const int AUDIOCHANNELS_4_1 = 5;
+		public const int AUDIOCHANNELS_5_0 = 6;
+		public const int AUDIOCHANNELS_5_1 = 7;
 		public const int AUDIOCHANNELS_6_1_Matrixed = 8;
 		public const int AUDIOCHANNELS_6_1_Discrete = 9;
-		public const int AUDIOCHANNELS_7_1          = 10;
-		public const int AUDIOCHANNELS_3_1          = 11;
-        public const int AUDIOCHANNELS_3_0          = 12;
-        public const int AUDIOCHANNELS_3D           = 13;
+		public const int AUDIOCHANNELS_7_1 = 10;
+		public const int AUDIOCHANNELS_3_1 = 11;
+		public const int AUDIOCHANNELS_3_0 = 12;
+		public const int AUDIOCHANNELS_3D = 13;
 
-		public const int EXCLUSIONTYPE_MoviePick  = 1;
-		public const int EXCLUSIONTYPE_Mobile     = 2;
-		public const int EXCLUSIONTYPE_iPhone     = 3;
-		public const int EXCLUSIONTYPE_Remote     = 4;
-		public const int EXCLUSIONTYPE_DPOPublic  = 5;
+		public const int EXCLUSIONTYPE_MoviePick = 1;
+		public const int EXCLUSIONTYPE_Mobile = 2;
+		public const int EXCLUSIONTYPE_iPhone = 3;
+		public const int EXCLUSIONTYPE_Remote = 4;
+		public const int EXCLUSIONTYPE_DPOPublic = 5;
 		public const int EXCLUSIONTYPE_DPOPrivate = 6;
 
 		public const int EVENTTYPE_Borrowed = 0;
 		public const int EVENTTYPE_Returned = 1;
-		public const int EVENTTYPE_Watched  = 2;
+		public const int EVENTTYPE_Watched = 2;
 
 		public const int CURRENCY_USD = 0;
 		public const int CURRENCY_ARP = 1;
@@ -608,141 +608,141 @@ namespace Invelos.DVDProfilerPlugin
 
 
 
-		public const int CREDIT_Undefined        = 255;
-		public const int CREDIT_Direction        = 0;
-		public const int CREDITSUB_Director               = 0;
-		public const int CREDIT_Writing          = 1;
-		public const int CREDITSUB_OriginalMaterialBy     = 0;
-		public const int CREDITSUB_Screenwriter           = 1;
-		public const int CREDITSUB_Writer                 = 2;
-		public const int CREDITSUB_OriginalCharactersBy   = 3;
-		public const int CREDITSUB_CreatedBy              = 4;
-		public const int CREDITSUB_StoryBy                = 5;
-		public const int CREDITSUB_DevelopedBy            = 6;
-		public const int CREDIT_Production       = 2;
-		public const int CREDITSUB_Producer               = 0;
-		public const int CREDITSUB_ExecutiveProducer      = 1;
-		public const int CREDIT_Cinematography   = 3;
-		public const int CREDITSUB_Cinematographer        = 0;
-		public const int CREDITSUB_DirectorOfPhotography  = 1;
-		public const int CREDIT_FilmEditing      = 4;
-		public const int CREDITSUB_FilmEditor             = 0;
-		public const int CREDIT_Music            = 5;
-		public const int CREDITSUB_Composer               = 0;
-		public const int CREDITSUB_SongWriter             = 1;
-		public const int CREDIT_Sound            = 6;
-		public const int CREDITSUB_SoundEditor            = 0;
-		public const int CREDITSUB_SoundReRecordingMixer  = 1;
-		public const int CREDITSUB_SoundDesigner          = 2;
-		public const int CREDITSUB_Sound                  = 3;
+		public const int CREDIT_Undefined = 255;
+		public const int CREDIT_Direction = 0;
+		public const int CREDITSUB_Director = 0;
+		public const int CREDIT_Writing = 1;
+		public const int CREDITSUB_OriginalMaterialBy = 0;
+		public const int CREDITSUB_Screenwriter = 1;
+		public const int CREDITSUB_Writer = 2;
+		public const int CREDITSUB_OriginalCharactersBy = 3;
+		public const int CREDITSUB_CreatedBy = 4;
+		public const int CREDITSUB_StoryBy = 5;
+		public const int CREDITSUB_DevelopedBy = 6;
+		public const int CREDIT_Production = 2;
+		public const int CREDITSUB_Producer = 0;
+		public const int CREDITSUB_ExecutiveProducer = 1;
+		public const int CREDIT_Cinematography = 3;
+		public const int CREDITSUB_Cinematographer = 0;
+		public const int CREDITSUB_DirectorOfPhotography = 1;
+		public const int CREDIT_FilmEditing = 4;
+		public const int CREDITSUB_FilmEditor = 0;
+		public const int CREDIT_Music = 5;
+		public const int CREDITSUB_Composer = 0;
+		public const int CREDITSUB_SongWriter = 1;
+		public const int CREDIT_Sound = 6;
+		public const int CREDITSUB_SoundEditor = 0;
+		public const int CREDITSUB_SoundReRecordingMixer = 1;
+		public const int CREDITSUB_SoundDesigner = 2;
+		public const int CREDITSUB_Sound = 3;
 		public const int CREDITSUB_SupervisingSoundEditor = 4;
-		public const int CREDITSUB_ProductionSoundMixer   = 5;
-		public const int CREDIT_Art              = 7;
-		public const int CREDITSUB_ProductionDesigner     = 0;
-		public const int CREDITSUB_ArtDirector            = 1;
+		public const int CREDITSUB_ProductionSoundMixer = 5;
+		public const int CREDIT_Art = 7;
+		public const int CREDITSUB_ProductionDesigner = 0;
+		public const int CREDITSUB_ArtDirector = 1;
 
 		public const int DIVIDER_Episode = 1;
-		public const int DIVIDER_Group   = 2;
-		public const int DIVIDER_Team    = 3;
-		public const int DIVIDER_EndDiv  = 4;
+		public const int DIVIDER_Group = 2;
+		public const int DIVIDER_Team = 3;
+		public const int DIVIDER_EndDiv = 4;
 
 		// IDVD Data load sections
 		// Other data elements are always loaded and always saved
 		public const int DATASEC_AllSections = -1;
-		public const int DATASEC_Cast       = 1;
-		public const int DATASEC_Crew       = 2;
-		public const int DATASEC_Studios    = 4;
-		public const int DATASEC_Retailers  = 8;
-		public const int DATASEC_Audio      = 16;
-		public const int DATASEC_BoxSet     = 32;
+		public const int DATASEC_Cast = 1;
+		public const int DATASEC_Crew = 2;
+		public const int DATASEC_Studios = 4;
+		public const int DATASEC_Retailers = 8;
+		public const int DATASEC_Audio = 16;
+		public const int DATASEC_BoxSet = 32;
 		public const int DATASEC_EasterEggs = 64;
-		public const int DATASEC_Genres     = 128;
-		public const int DATASEC_Features   = 256;
-		public const int DATASEC_Regions    = 512;
-		public const int DATASEC_Formats    = 1024;
-		public const int DATASEC_Events     = 2048;
-		public const int DATASEC_Review     = 4096;
-		public const int DATASEC_Tags       = 8192;
-		public const int DATASEC_Discs      = 16384;
+		public const int DATASEC_Genres = 128;
+		public const int DATASEC_Features = 256;
+		public const int DATASEC_Regions = 512;
+		public const int DATASEC_Formats = 1024;
+		public const int DATASEC_Events = 2048;
+		public const int DATASEC_Review = 4096;
+		public const int DATASEC_Tags = 8192;
+		public const int DATASEC_Discs = 16384;
 
 		// ICollectionFilter Constants
 		// ConditionTypes
-		public const int CONDITION_Equal          = 0;
-		public const int CONDITION_NotEqual       = 1;
-		public const int CONDITION_GreaterThan    = 2;
-		public const int CONDITION_LessThan       = 3;
+		public const int CONDITION_Equal = 0;
+		public const int CONDITION_NotEqual = 1;
+		public const int CONDITION_GreaterThan = 2;
+		public const int CONDITION_LessThan = 3;
 		public const int CONDITION_GreaterOrEqual = 4;
-		public const int CONDITION_LessOrEqual    = 5;
-		public const int CONDITION_Contain        = 6;
-		public const int CONDITION_NotContain     = 7;
+		public const int CONDITION_LessOrEqual = 5;
+		public const int CONDITION_Contain = 6;
+		public const int CONDITION_NotContain = 7;
 		// Fields
 		public const int FIELD_CollectionType = 0;
-		public const int FIELD_IsLoaned       = 1;
-		public const int FIELD_LoanDue        = 2;
-		public const int FIELD_Genres         = 3;
-		public const int FIELD_EverWatched    = 4;
-		public const int FIELD_LastWatched    = 5;
-		public const int FIELD_Studios        = 6;
-		public const int FIELD_BoxSet         = 7;
+		public const int FIELD_IsLoaned = 1;
+		public const int FIELD_LoanDue = 2;
+		public const int FIELD_Genres = 3;
+		public const int FIELD_EverWatched = 4;
+		public const int FIELD_LastWatched = 5;
+		public const int FIELD_Studios = 6;
+		public const int FIELD_BoxSet = 7;
 		///<summary>
 		/// Takes a User ID (int)
 		///</summary>
-		public const int FIELD_IsLoanedTo     = 8;
+		public const int FIELD_IsLoanedTo = 8;
 		///<summary>
 		/// Takes a User ID (int)
 		///</summary>
-		public const int FIELD_WatchedBy      = 9;
+		public const int FIELD_WatchedBy = 9;
 		// Sort orders
-		public const int SORT_Displayed            = 0;
-		public const int SORT_Random               = 1;
-		public const int SORT_TitleAsc             = 2;
-		public const int SORT_TitleDesc            = 3;
-		public const int SORT_CollectionNumberAsc  = 4;
+		public const int SORT_Displayed = 0;
+		public const int SORT_Random = 1;
+		public const int SORT_TitleAsc = 2;
+		public const int SORT_TitleDesc = 3;
+		public const int SORT_CollectionNumberAsc = 4;
 		public const int SORT_CollectionNumberDesc = 5;
-		public const int SORT_ProductionYearAsc    = 6;
-		public const int SORT_ProductionYearDesc   = 7;
-		public const int SORT_DVDReleaseAsc        = 8;
-		public const int SORT_DVDReleaseDesc       = 9;
-		public const int SORT_PurchaseDateAsc      = 10;
-		public const int SORT_PurchaseDateDesc     = 11;
-		public const int SORT_LastEditedAsc        = 12;
-		public const int SORT_LastEditedDesc       = 13;
-		public const int SORT_WishPriorityAsc      = 14;
-		public const int SORT_WishPriorityDesc     = 15;
-		public const int SORT_FirstGenreAsc        = 16;
-		public const int SORT_FirstGenreDesc       = 17;
-		public const int SORT_ReviewAsc            = 18;
-		public const int SORT_ReviewDesc           = 19;
-		public const int SORT_RunTimeAsc           = 20;
-		public const int SORT_RunTimeDesc          = 21;
-		public const int SORT_RatingAsc            = 22;
-		public const int SORT_RatingDesc           = 23;
-		public const int SORT_DiscLocationAsc      = 24;
-		public const int SORT_DiscLocationDesc     = 25;
-		public const int SORT_UPCAsc               = 26;
-		public const int SORT_UPCDesc              = 27;
-		public const int SORT_LastWatchedAsc       = 28;
-		public const int SORT_LastWatchedDesc      = 29;
+		public const int SORT_ProductionYearAsc = 6;
+		public const int SORT_ProductionYearDesc = 7;
+		public const int SORT_DVDReleaseAsc = 8;
+		public const int SORT_DVDReleaseDesc = 9;
+		public const int SORT_PurchaseDateAsc = 10;
+		public const int SORT_PurchaseDateDesc = 11;
+		public const int SORT_LastEditedAsc = 12;
+		public const int SORT_LastEditedDesc = 13;
+		public const int SORT_WishPriorityAsc = 14;
+		public const int SORT_WishPriorityDesc = 15;
+		public const int SORT_FirstGenreAsc = 16;
+		public const int SORT_FirstGenreDesc = 17;
+		public const int SORT_ReviewAsc = 18;
+		public const int SORT_ReviewDesc = 19;
+		public const int SORT_RunTimeAsc = 20;
+		public const int SORT_RunTimeDesc = 21;
+		public const int SORT_RatingAsc = 22;
+		public const int SORT_RatingDesc = 23;
+		public const int SORT_DiscLocationAsc = 24;
+		public const int SORT_DiscLocationDesc = 25;
+		public const int SORT_UPCAsc = 26;
+		public const int SORT_UPCDesc = 27;
+		public const int SORT_LastWatchedAsc = 28;
+		public const int SORT_LastWatchedDesc = 29;
 		// Interface color IDs
-		public const int COLOR_BackgroundSolid     = 0;
-		public const int COLOR_PanelGradTop        = 1;
-		public const int COLOR_PanelGradBottom     = 2;
-		public const int COLOR_PanelSolid          = 3;
-		public const int COLOR_PanelBevel          = 4;
-		public const int COLOR_MessageGradTop      = 5;
-		public const int COLOR_MessageGradBottom   = 6;
-		public const int COLOR_Highlight           = 7;
-		public const int COLOR_HighlightText       = 8;
-		public const int COLOR_ListLinesOdd        = 9;
-		public const int COLOR_ListLinesEven       = 10;
-		public const int COLOR_TabGradientTop      = 11;
-		public const int COLOR_TabGradientBottom   = 12;
-		public const int COLOR_TabBevel            = 13;
-        
+		public const int COLOR_BackgroundSolid = 0;
+		public const int COLOR_PanelGradTop = 1;
+		public const int COLOR_PanelGradBottom = 2;
+		public const int COLOR_PanelSolid = 3;
+		public const int COLOR_PanelBevel = 4;
+		public const int COLOR_MessageGradTop = 5;
+		public const int COLOR_MessageGradBottom = 6;
+		public const int COLOR_Highlight = 7;
+		public const int COLOR_HighlightText = 8;
+		public const int COLOR_ListLinesOdd = 9;
+		public const int COLOR_ListLinesEven = 10;
+		public const int COLOR_TabGradientTop = 11;
+		public const int COLOR_TabGradientBottom = 12;
+		public const int COLOR_TabBevel = 13;
+
 		public const int SHORTCUT_MOD_Shift = 0x2000;
-		public const int SHORTCUT_MOD_Ctrl  = 0x4000;
-		public const int SHORTCUT_MOD_Alt   = 0x8000;
-		public const int SHORTCUT_MOD_None  = 0;
+		public const int SHORTCUT_MOD_Ctrl = 0x4000;
+		public const int SHORTCUT_MOD_Alt = 0x8000;
+		public const int SHORTCUT_MOD_None = 0;
 
 		public const int SHORTCUT_KEY_F1 = 112;
 		public const int SHORTCUT_KEY_F2 = 113;
@@ -761,39 +761,39 @@ namespace Invelos.DVDProfilerPlugin
 		// Additional shortCut Keys use ASCII values
 
 		// Used for GetConstantByDescription and GetDescriptionByConstant
-		public const int CONSTANT_TYPE_SUBTITLE      = 0;
-		public const int CONSTANT_TYPE_AUDIOCONT     = 1;
-		public const int CONSTANT_TYPE_AUDIOFORMAT   = 2;
+		public const int CONSTANT_TYPE_SUBTITLE = 0;
+		public const int CONSTANT_TYPE_AUDIOCONT = 1;
+		public const int CONSTANT_TYPE_AUDIOFORMAT = 2;
 		public const int CONSTANT_TYPE_AUDIOCHANNELS = 3;
-		public const int CONSTANT_TYPE_GENRE         = 4;
-		public const int CONSTANT_TYPE_CREDIT        = 5;
-		public const int CONSTANT_TYPE_CREDITSUB     = 6;
-		public const int CONSTANT_TYPE_CASETYPE      = 7;
-		public const int CONSTANT_TYPE_CURRENCY      = 8;
-		public const int CONSTANT_TYPE_LOCALITY      = 9;
-		public const int CONSTANT_TYPE_COO           = 10;
+		public const int CONSTANT_TYPE_GENRE = 4;
+		public const int CONSTANT_TYPE_CREDIT = 5;
+		public const int CONSTANT_TYPE_CREDITSUB = 6;
+		public const int CONSTANT_TYPE_CASETYPE = 7;
+		public const int CONSTANT_TYPE_CURRENCY = 8;
+		public const int CONSTANT_TYPE_LOCALITY = 9;
+		public const int CONSTANT_TYPE_COO = 10;
 
-		public const int FIELD_TYPE_INT          = 1;
-		public const int FIELD_TYPE_STRING       = 2;
-		public const int FIELD_TYPE_DATETIME     = 3;
-		public const int FIELD_TYPE_CURRENCY     = 4;
-		public const int FIELD_TYPE_BYTE_ARRAY   = 5;
-        public const int FIELD_TYPE_BOOL         = 6;
-        public const int FIELD_TYPE_INT_ARRAY    = 7;
-        public const int FIELD_TYPE_STRING_ARRAY = 8;
+		public const int FIELD_TYPE_INT = 1;
+		public const int FIELD_TYPE_STRING = 2;
+		public const int FIELD_TYPE_DATETIME = 3;
+		public const int FIELD_TYPE_CURRENCY = 4;
+		public const int FIELD_TYPE_BYTE_ARRAY = 5;
+		public const int FIELD_TYPE_BOOL = 6;
+		public const int FIELD_TYPE_INT_ARRAY = 7;
+		public const int FIELD_TYPE_STRING_ARRAY = 8;
 
-        public const int FILTER_INPUT_TEXT     = 1;
-        public const int FILTER_INPUT_NUMERIC  = 2;
-        public const int FILTER_INPUT_CHECKBOX = 3;
-        public const int FILTER_INPUT_LISTBOX  = 4;
-        public const int FILTER_INPUT_DATE     = 5;
-    }
-	
-	class CategoryRegistrar
+		public const int FILTER_INPUT_TEXT = 1;
+		public const int FILTER_INPUT_NUMERIC = 2;
+		public const int FILTER_INPUT_CHECKBOX = 3;
+		public const int FILTER_INPUT_LISTBOX = 4;
+		public const int FILTER_INPUT_DATE = 5;
+	}
+
+    public class CategoryRegistrar
 	{
 		[ComImport(), Guid("0002E012-0000-0000-C000-000000000046"),
 			InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
-			internal interface ICatRegister
+		public interface ICatRegister
 		{
 			void RegisterCategories(
 				int cCategories,
@@ -825,7 +825,7 @@ namespace Invelos.DVDProfilerPlugin
 		}
 	}
 
-    [Guid("F41E0189-0483-4C05-AD30-B318E8518539"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+	[Guid("F41E0189-0483-4C05-AD30-B318E8518539"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 	public interface IDVDInfo
 	{
 		// Internal use
@@ -837,18 +837,18 @@ namespace Invelos.DVDProfilerPlugin
 		string GetSortTitle();
 		void SetSortTitle(string Value);
 		string GetFormattedProfileID();
-        string GetFormattedTitle();
+		string GetFormattedTitle();
 		string GetFormattedRating();
 		int GetProductionYear();
 		void SetProductionYear(int Value);
 		DateTime GetDVDReleaseDate();
 		void SetDVDReleaseDate(DateTime Value);
-        bool DVDReleaseDateIsEmpty();
-        void ClearDVDReleaseDate();
+		bool DVDReleaseDateIsEmpty();
+		void ClearDVDReleaseDate();
 		DateTime GetPurchaseDate();
 		void SetPurchaseDate(DateTime Value);
-        bool PurchaseDateIsEmpty();
-        void ClearPurchaseDate();
+		bool PurchaseDateIsEmpty();
+		void ClearPurchaseDate();
 		bool GetReceivedAsGift();
 		void SetReceivedAsGift(bool Value);
 		void GetGiftFrom(out string FirstName, out string LastName);
@@ -879,9 +879,9 @@ namespace Invelos.DVDProfilerPlugin
 		int GetColorType();
 		void SetColorType(int Value);
 
-        // As do these
-        int GetDRType();
-        void SetDRTYpe(int Value);
+		// As do these
+		int GetDRType();
+		void SetDRTYpe(int Value);
 
 		string GetOverview();
 		void SetOverview(string Value);
@@ -947,7 +947,7 @@ namespace Invelos.DVDProfilerPlugin
 		int GetCrewCount();
 		void ClearCrew();
 		void GetCrewByIndex(int CrewIndex, out string FirstName, out string MiddleName,
-			out string LastName, out int BirthYear, out int CreditType, out int CreditSubtype, 
+			out string LastName, out int BirthYear, out int CreditType, out int CreditSubtype,
 			out string CreditedAs);
 		void SetCrewByIndex(int CrewIndex, string FirstName, string MiddleName,
 			string LastName, int BirthYear, int CreditType, int CreditSubtype, string CreditedAs);
@@ -1016,10 +1016,10 @@ namespace Invelos.DVDProfilerPlugin
 		string GetParentProfileID();
 		void GetCastDividerByIndex(int CastIndex, out string Caption, out int DividerType);
 		void SetCastDividerByIndex(int CastIndex, out int DividerType);
-        void AddCastDivider(string Caption, int DividerType);
-        void GetCrewDividerByIndex(int CrewIndex, out string Caption, out int DividerType, out int CreditType);
-        void SetCrewDividerByIndex(int CrewIndex, string Caption, int DividerType, int CreditType);
-        string GetCrewCustomRoleByIndex(int CrewIndex);
+		void AddCastDivider(string Caption, int DividerType);
+		void GetCrewDividerByIndex(int CrewIndex, out string Caption, out int DividerType, out int CreditType);
+		void SetCrewDividerByIndex(int CrewIndex, string Caption, int DividerType, int CreditType);
+		string GetCrewCustomRoleByIndex(int CrewIndex);
 		void SetCrewCustomRoleByIndex(int CrewIndex, string CustomRole);
 		void AddCrewDivider(string Caption, int DividerType, int CreditType);
 		string GetMediaCompany(int MediaCompanyIndex);
@@ -1043,37 +1043,36 @@ namespace Invelos.DVDProfilerPlugin
 		void SetMyLinksXML(string Value);
 
 		int GetCustomInt(string FieldDomain, string FieldName, string ReadKey, int DefaultVal);
-        string GetCustomString(string FieldDomain, string FieldName, string ReadKey, string DefaultVal);
-        DateTime GetCustomDateTime(string FieldDomain, string FieldName, string ReadKey, DateTime DefaultVal);
-        long GetCustomCurrency(string FieldDomain, string FieldName, string ReadKey, long DefaultVal);
-        bool GetCustomBool(string FieldDomain, string FieldName, string ReadKey, bool DefaultVal);
-        object GetCustomByteArray(string FieldDomain, string FieldName, string ReadKey);
-        object GetCustomIntArray(string FieldDomain, string FieldName, string ReadKey);
-        object GetCustomStringArray(string FieldDomain, string FieldName, string ReadKey);
-        
-        // FieldDomain optional, otherwise will use the plugin's ClassID
-        void SetCustomInt(string FieldDomain, string FieldName, string WriteKey, int NewValue);
-        void SetCustomString(string FieldDomain, string FieldName, string WriteKey, string NewValue);
-        void SetCustomDateTime(string FieldDomain, string FieldName, string WriteKey, DateTime NewValue);
-        void SetCustomCurrency(string FieldDomain, string FieldName, string WriteKey, long NewValue);
-        void SetCustomBool(string FieldDomain, string FieldName, string WriteKey, bool NewValue);
-        void SetCustomByteArray(string FieldDomain, string FieldName, string WriteKey, object NewValue);
-        void SetCustomIntArray(string FieldDomain, string FieldName, string WriteKey, object NewValue);
-        void SetCustomStringArray(string FieldDomain, string FieldName, string WriteKey, object NewValue);
+		string GetCustomString(string FieldDomain, string FieldName, string ReadKey, string DefaultVal);
+		DateTime GetCustomDateTime(string FieldDomain, string FieldName, string ReadKey, DateTime DefaultVal);
+		long GetCustomCurrency(string FieldDomain, string FieldName, string ReadKey, long DefaultVal);
+		bool GetCustomBool(string FieldDomain, string FieldName, string ReadKey, bool DefaultVal);
+		object GetCustomByteArray(string FieldDomain, string FieldName, string ReadKey);
+		object GetCustomIntArray(string FieldDomain, string FieldName, string ReadKey);
+		object GetCustomStringArray(string FieldDomain, string FieldName, string ReadKey);
 
-        bool CustomFieldIsEmpty(string FieldDomain, string FieldName, string ReadKey);
-        void ClearCustomField(string FieldDomain, string FieldName, string WriteKey);
-    }
-	
+		// FieldDomain optional, otherwise will use the plugin's ClassID
+		void SetCustomInt(string FieldDomain, string FieldName, string WriteKey, int NewValue);
+		void SetCustomString(string FieldDomain, string FieldName, string WriteKey, string NewValue);
+		void SetCustomDateTime(string FieldDomain, string FieldName, string WriteKey, DateTime NewValue);
+		void SetCustomCurrency(string FieldDomain, string FieldName, string WriteKey, long NewValue);
+		void SetCustomBool(string FieldDomain, string FieldName, string WriteKey, bool NewValue);
+		void SetCustomByteArray(string FieldDomain, string FieldName, string WriteKey, object NewValue);
+		void SetCustomIntArray(string FieldDomain, string FieldName, string WriteKey, object NewValue);
+		void SetCustomStringArray(string FieldDomain, string FieldName, string WriteKey, object NewValue);
+
+		bool CustomFieldIsEmpty(string FieldDomain, string FieldName, string ReadKey);
+		void ClearCustomField(string FieldDomain, string FieldName, string WriteKey);
+	}
 
 	[Guid("AA380C0B-70E6-4714-94BC-EB2A930351E1"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 	public interface IDVDProfilerAPI
 	{
-        string GetLastError();
+		string GetLastError();
 		void SelectDVDByProfileID(string ProfileID);
 		object GetFlaggedProfileIDs();
-        void FlagDVDByProfileID(string ProfileID, bool FlagOn);
-		void  FlagAllDVDs(bool FlagOn);
+		void FlagDVDByProfileID(string ProfileID, bool FlagOn);
+		void FlagAllDVDs(bool FlagOn);
 		void FlagAllDisplayedDVDs(bool FlagOn);
 		bool DVDIsFlaggedByProfileID(string ProfileID);
 		void RegisterForEvent(int EventType);
@@ -1082,7 +1081,7 @@ namespace Invelos.DVDProfilerPlugin
 		void AssignMenuItemToToolbar(string MenuToken, string ToolbarCaption, bool CreateAsNeeded);
 		void RemoveMenuItemFromToolbar(string MenuToken, string ToolbarCaption);
 		void UnregisterMenuItem(string MenuToken);
-		bool GetRegisteredMenuItemChecked(string MenuToken); 
+		bool GetRegisteredMenuItemChecked(string MenuToken);
 		void SetRegisteredMenuItemChecked(string MenuToken, bool Checked);
 		int GetSortIndexByProfileID(string ProfileID);
 		IDVDInfo GetDisplayedDVD();
@@ -1096,7 +1095,7 @@ namespace Invelos.DVDProfilerPlugin
 		object GetAllProfileIDs();
 		void SetDisplayedProfileIDs(object ProfileIDList);
 		IDVDProfilerPluginHostWindow CreateHostWindow(string PanelCaption);
-		
+
 		// Parental control
 		bool ParentalControlIsEnabled();
 		bool ParentalControlHideInCollection();
@@ -1117,7 +1116,7 @@ namespace Invelos.DVDProfilerPlugin
 		void RemoveDVDFromCollection(string ProfileID, bool RemoveCoverScans);
 		void SaveDVDToCollection(IDVDInfo DVD);
 		void UpdateProfileInListDisplay(string ProfileID);
-		
+
 		// Interface queries
 		int GetInterfaceColor(int ColorID);
 
@@ -1159,19 +1158,19 @@ namespace Invelos.DVDProfilerPlugin
 		// Returns a variant array of matching Retailer IDs
 		object GetRetailerIDs(bool JustOnline, bool JustLocal);
 		IDVDProfilerRetailer GetRetailerByID(int RetailerID);
-        string EncodeProfileID(string UPCOrDiscID, int LocalityID, int VariantID);
-        void DecodeProfileID(string EncodedProfileID, out string UPCOrDiscID, out int LocalityID, out int VariantID);
-        // These return a variant array of matching profile IDs
-        // Pass -1 to match all localities
-        object GetMatchingOnlineProfileIDsByUPC(string UPC, int Locality);
-        object GetMatchingOnlineProfileIDsByDiscID(string DiscID, int Locality);
-        object GetMatchingOnlineProfileIDsByTitleSearch(string TitleSearchString, bool SearchWithin, bool SearchOriginalTitle, int Locality, bool DVD, bool BluRay, bool UltraHD);
-        void GetInfoOnlineProfileID(string ProfileID, out string Title, out string OriginalTitle, out string Edition, out int Locality, out int ProdYear,
-            out int RatingAge, out string Rating, out bool DVD, out bool BluRay, out bool UltraHD, out DateTime ReleaseDate);
-        bool GetOnlineProfileByID(out IDVDInfo RetDVD, string ProfileID);
-        // Pass blank string for ToDirectory to store in the images directory of the current database
-        bool DownloadCoverImagesForProfileID(string ProfileID, string ToDirectory);
-        string GetURLForOnlineThumbnail(string ProfileID, bool ForFront);
+		string EncodeProfileID(string UPCOrDiscID, int LocalityID, int VariantID);
+		void DecodeProfileID(string EncodedProfileID, out string UPCOrDiscID, out int LocalityID, out int VariantID);
+		// These return a variant array of matching profile IDs
+		// Pass -1 to match all localities
+		object GetMatchingOnlineProfileIDsByUPC(string UPC, int Locality);
+		object GetMatchingOnlineProfileIDsByDiscID(string DiscID, int Locality);
+		object GetMatchingOnlineProfileIDsByTitleSearch(string TitleSearchString, bool SearchWithin, bool SearchOriginalTitle, int Locality, bool DVD, bool BluRay, bool UltraHD);
+		void GetInfoOnlineProfileID(string ProfileID, out string Title, out string OriginalTitle, out string Edition, out int Locality, out int ProdYear,
+			out int RatingAge, out string Rating, out bool DVD, out bool BluRay, out bool UltraHD, out DateTime ReleaseDate);
+		bool GetOnlineProfileByID(out IDVDInfo RetDVD, string ProfileID);
+		// Pass blank string for ToDirectory to store in the images directory of the current database
+		bool DownloadCoverImagesForProfileID(string ProfileID, string ToDirectory);
+		string GetURLForOnlineThumbnail(string ProfileID, bool ForFront);
 		// Headshot methods take/return variant arrays of bytes containing the contents of the JPEG file/////////////////////////////
 		// Set functions may only be called on local databases
 		object GetCastHeadshot(string FirstName, string MiddleName, string LastName, int BirthYear);
@@ -1183,49 +1182,49 @@ namespace Invelos.DVDProfilerPlugin
 		void SetCastCustomHeadshot(string FirstName, string MiddleName, string LastName, int BirthYear, string ForProfileID, object ImageData);
 		void SetCrewCustomHeadshot(string FirstName, string MiddleName, string LastName, int BirthYear, string ForProfileID, object ImageData);
 
-        void GetCastHeadshotInfo(string FirstName, string MiddleName, string LastName, int BirthYear, string ForProfileID, out bool DBPhotoExists, out bool DBPhotoLocked, out string CustomPhotoFileName, out string ProfilePhotoFileName);
-        void GetCrewHeadshotInfo(string FirstName, string MiddleName, string LastName, int BirthYear, string ForProfileID, out bool DBPhotoExists, out bool DBPhotoLocked, out string CustomPhotoFileName, out string ProfilePhotoFileName);
-    
-        void ShowCastInfo(string FirstName, string MiddleName, string LastName, int BirthYear, bool AllowJumpTo);
+		void GetCastHeadshotInfo(string FirstName, string MiddleName, string LastName, int BirthYear, string ForProfileID, out bool DBPhotoExists, out bool DBPhotoLocked, out string CustomPhotoFileName, out string ProfilePhotoFileName);
+		void GetCrewHeadshotInfo(string FirstName, string MiddleName, string LastName, int BirthYear, string ForProfileID, out bool DBPhotoExists, out bool DBPhotoLocked, out string CustomPhotoFileName, out string ProfilePhotoFileName);
+
+		void ShowCastInfo(string FirstName, string MiddleName, string LastName, int BirthYear, bool AllowJumpTo);
 		// Pass CREDIT_Undefined to display entries for all credit types
 		void ShowCrewInfo(string FirstName, string MiddleName, string LastName, int BirthYear, int CreditType, bool AllowJumpTo);
 		// As with other currency functions, amounts are passed as a long with 4 implicit decimal places
 		long ConvertCurrency(long SourceAmount, int SourceCurrency, int DestCurrency);
-		
+
 		// Custom data field functions
-    	// WARNING: Field definitions are cleared whenever the database is cleared (for instance when performing a full database restore)
+		// WARNING: Field definitions are cleared whenever the database is cleared (for instance when performing a full database restore)
 
-    	// FieldType per FIELD_TYPE_ constants above
-    	// True on success
-        // FieldDomain optional, otherwise will use the plugin's ClassID
-        // Custom field definitions are database-specific. Register for EVENTID_DatabaseOpened
-        bool CreateCustomDVDField(string FieldDomain, string FieldName, int FieldType, string ReadKey, string WriteKey);
-        void DeleteCustomDVDField(string FieldDomain, string FieldName, string WriteKey);
-        void SetCustomDVDFieldKeys(string FieldDomain, string FieldName, string CurWriteKey, string NewReadKey, string NewWriteKey);
-        void SetCustomDVDFieldStorage(string FieldDomain, string FieldName, string WriteKey, bool StoreInBackup, bool StoreInDPO);
-	
-        // Returns XML definitions for all plugins with custom fields accessible to the current plugin
-        string GetCustomDVDFieldDefinitions();
+		// FieldType per FIELD_TYPE_ constants above
+		// True on success
+		// FieldDomain optional, otherwise will use the plugin's ClassID
+		// Custom field definitions are database-specific. Register for EVENTID_DatabaseOpened
+		bool CreateCustomDVDField(string FieldDomain, string FieldName, int FieldType, string ReadKey, string WriteKey);
+		void DeleteCustomDVDField(string FieldDomain, string FieldName, string WriteKey);
+		void SetCustomDVDFieldKeys(string FieldDomain, string FieldName, string CurWriteKey, string NewReadKey, string NewWriteKey);
+		void SetCustomDVDFieldStorage(string FieldDomain, string FieldName, string WriteKey, bool StoreInBackup, bool StoreInDPO);
 
-        // These return a Field Filter Token
-        // DisplayName: displayed next to the entry fields in the UI
-        string SetCustomFieldFilterable(string FieldDomain, string FieldName, string ReadKey, string DisplayName);
-        // FilterFieldMatch will be called for each potential match when filtering
-        // DisplayName: displayed next to the entry fields in the UI
-        // EntryType: one of FILTER_INPUT_ constants above 
-        // ComparisonTypes: optional array of strings (else null) e.g. "Contains"
-        // MatchItemList: optional array of strings, for use with FILTER_INPUT_LISTBOX
-        string SetCustomFieldFilterableA(string DisplayName, int EntryType, object ComparisonTypes, object MatchItemList);
-        void RemoveCustomFilterField(string  FieldFilterToken);
+		// Returns XML definitions for all plugins with custom fields accessible to the current plugin
+		string GetCustomDVDFieldDefinitions();
 
-        // Global settings are scoped to the current open database
-        // ReadKey and WriteKey may be any string to restrict access or blank to allow public access
-        // SettingDomain can be blank and will use the plugin's class ID
-        void SetGlobalSetting(string SettingDomain, string SettingName, string SettingValue, string ReadKey, string WriteKey);
-        string GetGlobalSetting(string SettingDomain, string SettingName, string ReadKey, string DefaultValue);
-        void RemoveGlobalSetting(string SettingDomain, string SettingName, string WriteKey);
+		// These return a Field Filter Token
+		// DisplayName: displayed next to the entry fields in the UI
+		string SetCustomFieldFilterable(string FieldDomain, string FieldName, string ReadKey, string DisplayName);
+		// FilterFieldMatch will be called for each potential match when filtering
+		// DisplayName: displayed next to the entry fields in the UI
+		// EntryType: one of FILTER_INPUT_ constants above 
+		// ComparisonTypes: optional array of strings (else null) e.g. "Contains"
+		// MatchItemList: optional array of strings, for use with FILTER_INPUT_LISTBOX
+		string SetCustomFieldFilterableA(string DisplayName, int EntryType, object ComparisonTypes, object MatchItemList);
+		void RemoveCustomFilterField(string FieldFilterToken);
 
-    }
+		// Global settings are scoped to the current open database
+		// ReadKey and WriteKey may be any string to restrict access or blank to allow public access
+		// SettingDomain can be blank and will use the plugin's class ID
+		void SetGlobalSetting(string SettingDomain, string SettingName, string SettingValue, string ReadKey, string WriteKey);
+		string GetGlobalSetting(string SettingDomain, string SettingName, string ReadKey, string DefaultValue);
+		void RemoveGlobalSetting(string SettingDomain, string SettingName, string WriteKey);
+
+	}
 
 	[Guid("6598EA88-8FAD-4875-A2F0-39BA225B8233"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 	public interface IDVDProfilerPluginHostWindow
@@ -1247,7 +1246,7 @@ namespace Invelos.DVDProfilerPlugin
 		int GetSortOrder();
 		void SetIgnoreParentalControl(bool Value);
 		bool GetIgnoreParentalControl();
-		
+
 		// Other functions
 		void Clear();
 		void AddCondition(int ConditionField, int ConditionType, object ConditionValue);
@@ -1267,7 +1266,7 @@ namespace Invelos.DVDProfilerPlugin
 		int GetVersionMinor();
 	}
 
-    [Guid("D3CEC54A-AAAD-44C7-BE68-B82A435F2EEB"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+	[Guid("D3CEC54A-AAAD-44C7-BE68-B82A435F2EEB"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
 	public interface IDVDProfilerPlugin
 	{
 		void Load(IDVDProfilerAPI DVDProAPI);
@@ -1280,25 +1279,25 @@ namespace Invelos.DVDProfilerPlugin
 	{
 		bool ExportsCustomDataXML();
 		string GetCustomDataXMLForDVD(IDVDInfo SourceDVD);
-		
+
 		// These should return an empty string if not otherwise implemented
- 		string GetHTMLForDPVarsFunctionSection();
+		string GetHTMLForDPVarsFunctionSection();
 		string GetHTMLForDPVarsDataSection(IDVDInfo SourceDVD, IDVDInfo CompareDVD);
 
 		// Can handle custom tags, or override behavior of built-in tags
 		string GetHTMLForTag(string TagName, string FullTag, IDVDInfo SourceDVD, IDVDInfo CompareDVD, out bool Handled);
-		
+
 		// These should return null, or an array of strings
 		object GetCustomHTMLTagNames();
 		object GetCustomHTMLParamsForTag(string TagName);
 
-        // Called for each potential match when filtering. Return true to match
-        // For use with SetCustomFieldFilterableA
-        // ComparisonTypeIndex: the selected index into ComparisonTypes
-        // ComparisonValue: the selected index into MatchItemList, or the user-entered value if no list
-        // TestDVD: Shell profile record (Profile ID and access to custom fields only)
-        // If more data is required from the profile, need to use DVDByProfileID or similar
-        bool FilterFieldMatch(string FieldFilterToken, int ComparisonTypeIndex, object ComparisonValue, IDVDInfo TestDVD);
+		// Called for each potential match when filtering. Return true to match
+		// For use with SetCustomFieldFilterableA
+		// ComparisonTypeIndex: the selected index into ComparisonTypes
+		// ComparisonValue: the selected index into MatchItemList, or the user-entered value if no list
+		// TestDVD: Shell profile record (Profile ID and access to custom fields only)
+		// If more data is required from the profile, need to use DVDByProfileID or similar
+		bool FilterFieldMatch(string FieldFilterToken, int ComparisonTypeIndex, object ComparisonValue, IDVDInfo TestDVD);
 	}
 
 	[Guid("F47F9D16-DC4D-45B7-9153-50195F99FAC1"), InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
@@ -1324,5 +1323,4 @@ namespace Invelos.DVDProfilerPlugin
 		string GetWebsite();
 		bool GetIsOnline();
 	}
-
 }

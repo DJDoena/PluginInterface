@@ -74,6 +74,7 @@
     <Compile Include="AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <None Include="DoenaSoft.DVDProfiler.Interface.props" />
     <None Include="PluginInterface.2.cs" />
     <None Include="DVDProfiler.Interface.nuspec" />
     <None Include="PluginInterface.3.cs" />
