@@ -77,8 +77,8 @@
     <None Include="PluginInterface.2.cs" />
     <None Include="DVDProfiler.Interface.nuspec" />
     <None Include="PluginInterface.3.cs" />
-    <Compile Include="PluginInterface.4.cs" />
-    <None Include="PluginInterface.5.cs" />
+    <None Include="PluginInterface.4.cs" />
+    <Compile Include="PluginInterface.5.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DVDProfiler.Interface.snk" />
